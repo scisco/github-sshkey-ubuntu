@@ -1,6 +1,14 @@
 Add github public SSH Key to your server
 ====================
 
+#### Dependencies
+
+You must have `jd` installed on your system
+
+	$: sudo apt-get install jd
+
+#### Run
+
 Run the script and follow the instructions:
 
 	$: ./github-ssh.sh
