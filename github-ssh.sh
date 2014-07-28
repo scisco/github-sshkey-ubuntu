@@ -19,7 +19,7 @@ counter=0
 
 ## Grab SSH keys from Github for specified users
 for user in "${user_array[@]}"; do
-	keys=$(curl https://api.github.com/users/$user/keys | jq '.[]' | jq -r '.key')
+	keys=$(curl -s https://api.github.com/users/$user/keys | jq '.[]' | jq -r '.key')
 
 	## Convert SSH Keys into Bash Array
 	while IFS= read -r line; do
@@ -36,3 +36,7 @@ done
 
 ## Fix authorized_keys permission
 chmod 644 $setup_dir/.ssh/authorized_keys
+
+echo ""
+echo "$counter public SSh keys were added"
+exit 1
