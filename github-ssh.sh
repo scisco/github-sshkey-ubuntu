@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ## Author: scisco
 
@@ -31,11 +31,11 @@ done
 
 ## Add them to authorized_keys
 for key in "${key_array[@]}"; do
-	echo $key >> $setup_dir/.ssh/authorized_keys
+	echo $key >> $HOME/.ssh/authorized_keys
 done
 
 ## Fix authorized_keys permission
-chmod 644 $setup_dir/.ssh/authorized_keys
+chmod 644 $HOME/.ssh/authorized_keys
 
 echo ""
 echo "$counter public SSh keys were added"
