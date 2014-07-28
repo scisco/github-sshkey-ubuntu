@@ -3,9 +3,9 @@ Add github public SSH Key to your server
 
 #### Dependencies
 
-You must have `jd` installed on your system
+You must have `jq` installed on your system
 
-	$: sudo apt-get install jd
+	$: sudo apt-get install jq
 
 #### Run
 
